@@ -1,6 +1,6 @@
 #include "Student.h"
 
-Student::Student(std::string naam)
+Student::Student(std::string naam) : naam(naam)
 {
 }
 
@@ -15,5 +15,5 @@ int Student::getEc()
 
 std::string Student::getName()
 {
-	return std::string();
+	return naam;
 }

@@ -13,4 +13,9 @@ public:
 	int getEc();
 	std::string getName();
 
+	bool operator== (const Student &arg)
+	{
+		return arg.naam == naam;
+	}
+
 };

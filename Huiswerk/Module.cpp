@@ -10,10 +10,10 @@ void Module::print()
 
 	stream << "Module naam: " + naam << std::endl;
 	stream << "Docent: " + docent.getName() << std::endl;
-	stream << "Studenten: " + studenten.size() << std::endl;
+	stream << "Studenten: " << std::endl;
 
 	for (int i = 0; i < studenten.size(); i++) {
-		stream << "  " + studenten[i].getName();
+		stream << " " + studenten[i].getName() << std::endl;
 	}
 
 	std::cout << stream.str();
@@ -26,7 +26,9 @@ void Module::addStudent(const Student& student)
 
 void Module::removeStudent(Student student)
 {
-	studenten.
+	auto it = std::find(studenten.begin(), studenten.end(), student);
+	if(it != studenten.end())
+		studenten.erase(it);
 }
 
 void Module::updateEc(int ec)
