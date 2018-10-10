@@ -22,6 +22,8 @@ void Module::print()
 void Module::addStudent(const Student& student)
 {
 	studenten.push_back(student);
+	auto it = studenten.end();
+	it->addEc(ec);
 }
 
 void Module::removeStudent(Student student)
@@ -33,4 +35,10 @@ void Module::removeStudent(Student student)
 
 void Module::updateEc(int ec)
 {
+	for (int i = 0; i < studenten.size(); i++) {
+		studenten[i].addEc(-(this->ec));
+		studenten[i].addEc(ec);
+	}
+
+	this->ec = ec;
 }

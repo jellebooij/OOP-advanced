@@ -6,11 +6,12 @@ Student::Student(std::string naam) : naam(naam)
 
 void Student::addEc(int ec)
 {
+	this->ec += ec;
 }
 
 int Student::getEc()
 {
-	return 0;
+	return ec;
 }
 
 std::string Student::getName()
