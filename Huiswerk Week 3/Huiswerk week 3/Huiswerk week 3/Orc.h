@@ -4,7 +4,7 @@
 class Orc : public Npc {
 
 public:
-	Orc(std::string name) : Npc(name) { this->name = name; }
+	Orc(std::string name) : Npc(name) {}
 	void render() override { 
 	
 		Npc::render();  

@@ -5,7 +5,7 @@
 
 int main() {
 
-	Npc* henk = &Shaman(&Soldier(&Farmer(&Orc("Piet"))));
+	Npc* henk = new Soldier(new Farmer(new Shaman(new Orc("Piet"))));
 	(henk)->render();
 
 	std::cin.get();
